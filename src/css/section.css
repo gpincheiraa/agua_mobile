@@ -1,0 +1,13 @@
+.app-section{
+  margin-top: 60px; /* Same height that navbar because it's fixed */
+  padding: 10px;
+}
+
+.app-section.ng-enter {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.app-section.ng-enter-active {
+  opacity: 1;
+}

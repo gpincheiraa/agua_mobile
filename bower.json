@@ -1,0 +1,25 @@
+{
+  "name": "medicion_agua",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Gonzalo Pincheira A. <g.pincheira.a@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "Materialize": "materialize#~0.97.5",
+    "angular-animate": "~1.5.0"
+  }
+}
