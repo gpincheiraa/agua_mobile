@@ -37,7 +37,15 @@ angular.module('MedicionAgua').run(['$templateCache', function($templateCache) {
   $templateCache.put('src/views/navbar.html',
     "<div class=\"app-navbar row indigo accent-2 z-depth-2\">\n" +
     "  <h4>Navbar</h4>\n" +
-    "</div>"
+    "  <a data-activates=\"slide-out\" class=\"button-collapse\" sidenav><i class=\"mdi-navigation-menu\"></i></a>\n" +
+    "</div>\n" +
+    "<nav>\n" +
+    "  <ul id=\"slide-out\" class=\"side-nav\">\n" +
+    "    <li><a>First Sidebar Link</a></li>\n" +
+    "    <li><a>Second Sidebar Link</a></li>\n" +
+    "  </ul>\n" +
+    "  \n" +
+    "</nav>"
   );
 
 
