@@ -1,0 +1,7 @@
+before_script:
+  - node -v
+  - git --version
+  - npm install
+check:
+  script:
+    - karma start
