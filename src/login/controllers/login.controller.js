@@ -21,7 +21,7 @@
 
     function login(_user){
       console.log(_user);
-      $state.go('medicion.sectores');
+      $state.go('medicion.sectors');
     }
     
   }

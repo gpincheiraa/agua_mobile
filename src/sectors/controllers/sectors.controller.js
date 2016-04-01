@@ -3,20 +3,20 @@
   
   angular
     .module('MedicionAgua')
-    .controller('SectoresController', Controller);
+    .controller('SectorsController', Controller);
   
-  Controller.$inject = ['$state', 'SectoresService'];
+  Controller.$inject = ['$state', 'SectorsService', 'CondosService'];
   
-  function Controller($state, SectoresService) {
+  function Controller($state, SectorsService, CondosService) {
     
     var vm = this;
     
-    vm.listaSectores = SectoresService.getSectores();
-    vm.listaCondominios = [
+    vm.sectorsList = SectorsService.getSectors();
+    vm.condosList = [
       {id: 1, nombre: 'Condominio 1'},
       {id: 2, nombre: 'Condominio 2'},
     ];
-    vm.condominioSeleccionado = vm.listaCondominios[0].id;
+    vm.selectedCondo = vm.condosList[0].id;
 
     vm.sectorGo = sectorGo;
 

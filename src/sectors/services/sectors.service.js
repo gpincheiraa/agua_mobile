@@ -3,13 +3,13 @@
   
   angular
     .module('MedicionAgua')
-    .factory('SectoresService', factory);
+    .factory('SectorsService', factory);
   
   //factory.$inject = ['dependencies'];
   
   function factory() {
     var service = {
-      getSectores: getAll,
+      getSectors: getAll,
       getSector: get
     };
     

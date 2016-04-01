@@ -4,22 +4,22 @@ module.exports = function(grunt) {
   var ANGULAR_MAIN_MODULE  = 'MedicionAgua',
       
       ANGULAR_TEMPLATES    = ['src/**/*.html'],
-      TEMPLATE_CACHE_DEST  = 'src/js/templates.js',
+      TEMPLATE_CACHE_DEST  = 'src/templates.js',
       
       WIREDEP_APP_DEST     = 'index.html',
       WIREDEP_TEST_DEST    = 'karma.conf.js',
       JAVASCRIPT_ARRAY_SRC = ['src/**/*.js'],
-      INDEX_URL            = 'http://localhost:9000/#/',
+      INDEX_URL            = 'http://0.0.0.0:9000/#/',
 
       FILES_FOR_WATCH      = ['index.html',
                               'gruntfile.js',
                               'test/**/*.js',
                               'src/**/*.js',
-                              'src/**/*.css',
+                              'assets/**/*.css',
                               'src/**/*.html',
-                              '!src/js/templates.js'],
+                              '!src/templates.js'],
       
-      INJECTOR_ARRAY_SRC   = ['src/**/*.js', 'src/**/*.css'],
+      INJECTOR_ARRAY_SRC   = ['src/**/*.js', 'assets/**/*.css'],
 
       TASKS_WHEN_FILES_CHANGES = ['ngtemplates',
                                   'injector'],
@@ -108,6 +108,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9000,
+          hostname: '0.0.0.0',
           base: '.',
           open: false
         }

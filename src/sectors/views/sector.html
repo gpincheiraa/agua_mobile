@@ -1,10 +1,10 @@
 <div class="row">
-  <a ui-sref="medicion.sectores">Volver a Todos los Sectores</a>
+  <a ui-sref="medicion.sectors">Volver a Todos los Sectores</a>
 </div>
 <div class="row">
-  <h5>Sector <span ng-bind="sector.sectorSeleccionado.id"></span></h5>
+  <h5>Sector <span ng-bind="sector.selectedSector.id"></span></h5>
   
-  <div class="col s12" ng-repeat="sitio in sector.sectorSeleccionado.sitios track by sitio.id">
+  <div class="col s12" ng-repeat="sitio in sector.selectedSector.sitios track by sitio.id">
     <div class="row sector-item z-depth-2">
       <div class="col s12">
         <h5 ng-bind="sitio.nombre"></h5> 

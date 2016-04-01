@@ -1,12 +1,12 @@
 <div class="row">
   <h5>Seleccione Condominio</h5>
-  <select ng-model="sectores.condominioSeleccionado" ng-options="condominio.id as condominio.nombre for condominio in sectores.listaCondominios"></select>
+  <select ng-model="sectors.selectedCondo" ng-options="condo.id as condo.nombre for condo in sectors.condosList"></select>
 </div>
 <div class="row">
   <h5>Sectores</h5>
   
-  <div class="col s12" ng-repeat="sector in sectores.listaSectores track by sector.id">
-    <div class="row sector-item z-depth-2" ng-click="sectores.sectorGo(sector.id)">
+  <div class="col s12" ng-repeat="sector in sectors.sectorsList track by sector.id">
+    <div class="row sector-item z-depth-2" ng-click="sectors.sectorGo(sector.id)">
       <div class="col s12">
         <h5 ng-bind="sector.nombre"></h5> 
       </div>

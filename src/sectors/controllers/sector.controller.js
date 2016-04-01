@@ -12,7 +12,7 @@
     
     var vm = this;
     
-    vm.sectorSeleccionado = SectorResolve;
+    vm.selectedSector = SectorResolve;
 
   }
 })();
