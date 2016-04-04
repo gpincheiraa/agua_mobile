@@ -20,7 +20,6 @@
     vm.loginGo = login;
 
     function login(_user){
-      console.log(_user);
       $state.go('medicion.sectors');
     }
     

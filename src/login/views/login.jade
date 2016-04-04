@@ -1,0 +1,12 @@
+.row
+  form.col.s8.offset-s2(name='loginForm', ng-submit='login.loginGo(login.user)')
+    h4 Control de medidores de agua
+    .row
+      label(for='first_name') Email
+      input#first_name.validate(type='email', ng-model='login.user.email', required='')
+    .row
+      label(for='last_name') Contraseña
+      input#last_name.validate(type='password', ng-model='login.user.password', required='')
+    button.btn.waves-effect.waves-light.indigo.accent-2(type='submit', name='action', ng-disabled='loginForm.$invalid')
+      | Ingresar
+      i.material-icons.right send

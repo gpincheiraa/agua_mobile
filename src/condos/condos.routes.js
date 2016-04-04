@@ -11,7 +11,7 @@
     var mainViewConf = {
 
       // REPLACE [when jade installed]
-      templateUrl: 'src/condos/views/view.html',
+      templateUrl: 'assets/views/condos/condos.html',
       // END REPLACE
 
       controller: 'CondosController',

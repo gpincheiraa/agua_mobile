@@ -5,20 +5,21 @@
     .module('MedicionAgua')
     .controller('SectorsController', Controller);
   
-  Controller.$inject = ['$state', 'SectorsService', 'CondosService'];
+  Controller.$inject = ['$state', 'SectorsService'];
   
-  function Controller($state, SectorsService, CondosService) {
+  function Controller($state, SectorsService) {
     
     var vm = this;
-    
-    vm.sectorsList = SectorsService.getSectors();
-    vm.condosList = [
-      {id: 1, nombre: 'Condominio 1'},
-      {id: 2, nombre: 'Condominio 2'},
-    ];
-    vm.selectedCondo = vm.condosList[0].id;
 
-    vm.sectorGo = sectorGo;
+
+    vm.assignedSectorsList = SectorsService.getSectorsAssigned();
+    vm.selectedSectorId = vm.assignedSectorsList[0].id;
+    vm.plotsList = SectorsService.getPlots(vm.selectedSectorId);
+    
+    
+    function plotGo(_plotId){
+      $state.go('medicion.plot', {id: _plotId});
+    }
 
     function sectorGo(_id){
       $state.go('medicion.sector',{idSector: _id});

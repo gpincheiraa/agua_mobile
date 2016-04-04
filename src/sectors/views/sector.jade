@@ -1,0 +1,15 @@
+.row
+  a(ui-sref='medicion.sectors') Volver a Todos los Sectores
+.row
+  h5
+    | Sector 
+    span(ng-bind='sector.selectedSector.id')
+  .col.s12(ng-repeat='sitio in sector.selectedSector.sitios track by sitio.id')
+    .row.sector-item.z-depth-2
+      .col.s12
+        h5(ng-bind='sitio.nombre')
+      .col.s6
+        | Propietario: 
+        span(ng-bind='sitio.propietario')
+      .col.s6
+        | Ultima Lectura:

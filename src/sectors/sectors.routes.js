@@ -11,17 +11,28 @@
   function configFn($stateProvider, APP_SETTINGS){
     var mainViewConf = {
       // REPLACE [when jade installed]
-      templateUrl: 'src/sectors/views/sectors.html',
+      templateUrl: 'assets/views/sectors/sectors.html',
       // END REPLACE
 
       controller: 'SectorsController',
       controllerAs: 'sectors',
-      resolve: {/* ... */}
+      resolve: {
+        CondosResolve: ['CondosService','$stateParams', function(CondosService, $stateParams){
+          return CondosService.getCondos();
+        }],
+        CondoSelected: ['CondosResolve', 'CondosService', function(CondosResolve, CondosService){
+          //ESTE ID LUEGO DEBE OBTENERSE DEL CONDOMINIO QUE TIENE ASIGNADO EL USUARIO LOGGEADO
+          var condoId = CondosResolve[0].id;
+          return CondosService.getCondo(condoId).then(function(response){
+            return response.toJSON();
+          });
+        }]
+      }
     };
 
     var sectorViewConf = {
       // REPLACE [when jade installed]
-      templateUrl: 'src/sectors/views/sector.html',
+      templateUrl: 'assets/views/sectors/sector.html',
       // END REPLACE
 
       controller: 'SectorController',

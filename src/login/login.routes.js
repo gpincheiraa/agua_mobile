@@ -11,7 +11,7 @@
     var mainViewConf = {
 
       // REPLACE [when jade installed]
-      templateUrl: 'src/login/views/login.html',
+      templateUrl: 'assets/views/login/login.html',
       // END REPLACE
 
       controller: 'LoginController',
