@@ -9,16 +9,16 @@
 
   function configFn($stateProvider, APP_SETTINGS){
     var mainViewConf = {
-      templateUrl: 'assets/views/condos/condos.html',
-      controller: 'CondosController',
-      controllersAs: 'condos',
+      templateUrl: 'assets/views/measures/measures.html',
+      controller: 'MeasuresController',
+      controllersAs: 'measures',
       resolve:{ /*...*/ }
     };
 
 
     $stateProvider
-      .state('medicion.condos', {
-        url: 'condos',
+      .state('medicion.measures', {
+        url: 'measure',
         views: {
           'navbar': APP_SETTINGS.NAVBAR_SETTINGS,
           'main': mainViewConf

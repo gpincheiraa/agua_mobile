@@ -1,28 +1,8 @@
 .row
-  h5 Sectores asignados
-  select.form-control(
-    ng-options="sector.id as sector.name for sector in sectors.assignedSectorsList",
-    ng-model="sectors.selectedSectorId"
-    ng-change="sectors.loadPlots(sectors.selectedSectorId)")
-  hr
-  ul.collection
-    li.collection-item.avatar(ng-repeat='plot in sectors.plotsList track by plot.id')
-      i.material-icons.circle perm_media
-      span.title
-        | Parcela N° {{plot.plot_number}}
-      p
-        | Dueño: {{plot.owner}}
-      a.secondary-content(href='#!')
-        i.material-icons grade
-   
-
-  //- .col.s12(ng-repeat='sector in sectors.assignedSectorsList track by sector.id')
-  //-   .row.sector-item.z-depth-2(ng-click='sectors.sectorGo(sector.id)')
-  //-     .col.s12
-  //-       h5(ng-bind='sector.id')
-  //-     .col.s6
-  //-       | N° Sitio: 
-  //-       span(ng-bind='sector.plot_number')
-  //-     .col.s6
-  //-       | Dueño: 
-  //-       span(ng-bind='sector.owner')
+  .col.s12(ng-repeat='sector in sectors.sectors track by sector.id')
+    .card.blue-grey.darken-1
+      .card-content.white-text
+        span.card-title Sector: {{sector.name}}
+      .card-action
+        a(href='#') Medido: {{sector.completed}}%
+        a(ui-sref='medicion.plots({idsector: sector.id})') Ingresar

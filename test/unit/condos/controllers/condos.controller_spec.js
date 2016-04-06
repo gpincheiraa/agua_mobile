@@ -2,12 +2,12 @@
 
   'use strict';
 
-  describe('Login Controller',plotSpecs);
+  describe('Condos Controller', condosSpec);
 
-  function plotSpecs(){
+  function  condosSpec(){
 
     //////////////  GLOBALS   ////////////////////////////////
-    var LoginController;
+    var CondosController;
 
     //////////////  BEFORE EACH ////////////////////////////////
     
@@ -16,14 +16,14 @@
     beforeEach(inject(eachSpec));
 
     function eachSpec($controller){
-      LoginController = $controller('LoginController');
+      CondosController = $controller('CondosController');
     }
 
     //////////////////   SPECS //////////////////////////////////
-    it('LoginController deberia estar definido', spec1);
+    it('CondosController deberia estar definido', spec1);
 
     function spec1() {
-      expect(LoginController).toBeDefined();
+      expect(CondosController).toBeDefined();
     }
     
   }

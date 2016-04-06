@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       INJECTOR_ARRAY_SRC   = ['src/**/*.js', 'assets/**/*.css'],
 
       TASKS_WHEN_FILES_CHANGE = {
-                          'JS'    : [ 'injector'/*,'shell:test'*/ ],
+                          'JS'    : [ 'injector','shell:test' ],
                           'CSS'   : [ /*'postcss',*/'injector' ],
                           'SCSS'  : [ 'compass'],
                           'JADE'  : [ 'jade', 'ngtemplates' ],
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                                 'wiredep',
                                 'compass',
                                 'injector',
-                                //'shell:test',
+                                'shell:test',
                                 'connect',
                                 'open:dev',
                                 'watch'];

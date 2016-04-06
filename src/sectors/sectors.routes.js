@@ -10,10 +10,7 @@
 
   function configFn($stateProvider, APP_SETTINGS){
     var mainViewConf = {
-      // REPLACE [when jade installed]
       templateUrl: 'assets/views/sectors/sectors.html',
-      // END REPLACE
-
       controller: 'SectorsController',
       controllerAs: 'sectors',
       resolve: {
@@ -30,34 +27,12 @@
       }
     };
 
-    var sectorViewConf = {
-      // REPLACE [when jade installed]
-      templateUrl: 'assets/views/sectors/sector.html',
-      // END REPLACE
-
-      controller: 'SectorController',
-      controllerAs: 'sector',
-      resolve: {
-        SectorResolve: ['$stateParams','SectorsService', function($stateParams, SectorsService){
-          return SectorsService.getSector($stateParams.idSector);
-        }]
-      }
-    };
-
     $stateProvider
-      .state('medicion.sectors', {
+      .state('medicion.sector',{
         url: 'sectors',
         views: {
           'navbar': APP_SETTINGS.NAVBAR_SETTINGS,
           'main': mainViewConf
-        }
-      })
-
-      .state('medicion.sector',{
-        url: 'sector/:idSector',
-        views: {
-          'navbar': APP_SETTINGS.NAVBAR_SETTINGS,
-          'main': sectorViewConf
         }
       });
   }

@@ -11,6 +11,7 @@
     
     var vm = this;
 
+    vm.sectors = SectorsService.getSectorsAssigned();
 
     vm.assignedSectorsList = SectorsService.getSectorsAssigned();
     vm.selectedSectorId = vm.assignedSectorsList[0].id;

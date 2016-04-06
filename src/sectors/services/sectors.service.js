@@ -30,17 +30,19 @@
     function getSectorsAssigned(){
       return [{
         "id": 1,
-        "name": "Las Palmas",
+        "name"      : "Las Palmas",
         "created_at": "2016-04-01T13:03:21.401Z",
         "updated_at": "2016-04-01T13:03:21.401Z",
-        "condo_id": 1
+        "condo_id"  : 1,
+        "completed" : 90
       },
       {
         "id": 2,
-        "name": "Las Liebres",
+        "name"      : "Las Liebres",
         "created_at": "2016-04-01T13:03:21.408Z",
         "updated_at": "2016-04-01T13:03:21.408Z",
-        "condo_id": 1
+        "condo_id"  : 1,
+        "completed" : 48
       }];
     }
 

@@ -1,0 +1,10 @@
+ul.collection
+  li.collection-item.avatar(ng-repeat="plot in plots.plots track by plot.id")
+    i.material-icons.circle folder
+    span.title Parcela N°{{plot.plot_number}}
+    p
+      | First Line 
+      br
+      |          Second Line
+    a.secondary-content(ui-sref='medicion.measures')
+      i.material-icons send

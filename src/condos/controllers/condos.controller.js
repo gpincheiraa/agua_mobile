@@ -5,11 +5,11 @@
     .module('MedicionAgua')
     .controller('CondosController', Controller);
 
-    Controller.$inject = ['$state'];
+  Controller.$inject = ['$state'];
 
-    /* @ngInject */
-    function Controller($state){
-      var vm = this;
-      
-    }
+  /* @ngInject */
+  function Controller($state){
+    var vm = this;
+    
+  }
 })();

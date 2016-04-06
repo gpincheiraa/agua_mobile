@@ -21,9 +21,9 @@
       function login(_user){
         //Login and set user with the response
         setUser({
-          role: 'superadmin',
+          role: 'user',
           token: 'f9099b1669933d7f6470f26061823839',
-          condos_assigned: [{id:1, name: 'Campor Mar'}, {id:2, name: 'Rio Mar'}]
+          sectors_assigned: [{id:1, name: 'Las Palmas'}, {id:2, name: 'Las Liebres'}]
         });
  
       }
